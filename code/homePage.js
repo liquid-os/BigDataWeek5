@@ -472,7 +472,7 @@ function getYears(years) {
 }
 
 function choropleth(d) {
-	var choro = "rgb(214, 214, 214)"
+	var choro = "rgb(0, 100, 214)"
 	if (currentTap == "Attendance") {
 		if (d.id in statistics) {
 			var years = getYears(Object.keys(statistics[d.id].years));
@@ -824,7 +824,7 @@ function getCercle(coordinate, r) {
 		p0 = p1;
 	}
 
-	var radius = 10;
+	var radius = 20;
 	var centroid = d3.polygonCentroid(polygon);
 	var angleOffset = -2 * Math.PI;
 	var angle = 0;
@@ -842,4 +842,3 @@ function getCercle(coordinate, r) {
 
 	return circle;
 }
-
